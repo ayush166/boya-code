@@ -1,10 +1,459 @@
-.flex{
+.element {
+    padding-left: 1rem; /* 16px */
+    padding-right: 1rem; /* 16px */
+  }
+  
+  /* This applies when the screen width is 768 pixels or more */
+  @media (min-width: 768px) {
+    .element {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
+
+  .fixed {
+    position: fixed;
+  }
+  
+  .inset-x-0 {
+    left: 0;
+    right: 0;
+  }
+
+  .top-0 {
+    top: 0;
+  }
+  
+  .z-50 {
+    z-index: 50;
+  }
+  
+  .transform {
+    transform: scale(1); /* This is a placeholder since 'transform' needs a function to work */
+  }
+  .flex-container {
     display: flex;
+    justify-content: space-between;
+    padding-top: 2.5rem; /* Equivalent to Tailwind's py-10 */
+    padding-bottom: 2.5rem; /* Equivalent to Tailwind's py-10 */
+  }  
+
+  .hidden-md-up {
+    display: none; /* Hide by default */
+  }
+  
+  @media (min-width: 768px) { /* Adjust this value if your project has a different breakpoint */
+    .hidden-md-up {
+      display: block; /* Show as block on medium screens and larger */
+    }
+  }
+  .flex-gap-3-md-hidden {
+    display: flex;
+    gap: 0.75rem; /* This sets the gap between flex items */
+  }
+  
+  @media (min-width: 768px) {
+    .flex-gap-3-md-hidden {
+      display: none; /* This hides the element on medium screens and up */
+    }
+  }
+  .hidden-md-block {
+    display: none;
+  }
+  
+  /* On medium-sized screens, display it as a block element */
+  @media (min-width: 768px) {
+    .hidden-md-block {
+      display: block;
+    }
+  }  
+  .element-1 {
+    padding-top: 10rem; /* Equivalent to pt-20 in Tailwind, assuming the base font size is 16px */
+  }
+  
+  /* Apply flex display on medium screens and up */
+  @media (min-width: 768px) {
+    .element-1 {
+      display: flex;
+    }
+  }
+
+  /* Right margin */
+.element-2 {
+    margin-right: 20px;
+  }
+  
+  /* Medium screen width */
+  @media (min-width: 768px) {
+    .element-2 {
+      width: 50%;
+    }
+  }
+  
+  .montserrat-alt-text-white-text-4xl {
+    font-family: 'Montserrat Alternates', sans-serif; /* Custom class for Montserrat Alternates font */
+    color: #ffffff; /* White text color */
+    font-size: 2.25rem; /* Equivalent to Tailwind's text-4xl */
+    line-height: 2.5rem; /* This is a typical line-height value for text-4xl, adjust as needed */
+  }
+
+  .text-white-font-bold-text-2xl-pb-5{
+    color: #ffffff; /* White text */
+  font-weight: bold; /* Bold font */
+  font-size: 1.5rem; /* Equivalent to Tailwind's text-2xl */
+  padding-bottom: 1.25rem; /* Equivalent to Tailwind's pb-5 */
+  }
+
+  .pr-5-text-white {
+    padding-right: 1.25rem; /* Equivalent to Tailwind's pr-5, assuming 1rem = 16px */
+    color: #ffffff; /* White text */
+  }
+
+  .flex-gap-3-flex-col-py-5-justify-center-items-center-md-justify-start {
+    display: flex;
+    flex-direction: column; /* Default to column layout */
+    gap: 0.75rem; /* Gap between items */
+    padding-top: 1.25rem; /* Top padding */
+    padding-bottom: 1.25rem; /* Bottom padding */
+    justify-content: center; /* Center items along the main axis */
+    align-items: center; /* Center items along the cross axis */
+  }
+  
+  @media (min-width: 768px) {
+    .flex-gap-3-flex-col-py-5-justify-center-items-center-md-justify-start {
+      flex-direction: row; /* Row layout on medium screens and above */
+      justify-content: flex-start; /* Align items to the start on medium screens */
+    }
+  }
+  .text-blue-400-bg-white-px-5-py-2-rounded-md-w-max {
+    color: #60A5FA; /* Approximate to Tailwind's blue-400 */
+    background-color: #ffffff; /* White background */
+    padding-left: 1.25rem; /* Equivalent to Tailwind's px-5 */
+    padding-right: 1.25rem; /* Equivalent to Tailwind's px-5 */
+    padding-top: 0.5rem; /* Equivalent to Tailwind's py-2 */
+    padding-bottom: 0.5rem; /* Equivalent to Tailwind's py-2 */
+    border-radius: 0.375rem; /* Equivalent to Tailwind's rounded-md */
+    width: max-content; /* Equivalent to Tailwind's w-max */
+  }
+  .custom-class {
+    color: #60A5FA; /* This is an approximation of Tailwind's blue-400 */
+    background-color: #FFFFFF; /* White background */
+    padding-left: 1.25rem; /* Equivalent to Tailwind's px-5 */
+    padding-right: 1.25rem; /* Equivalent to Tailwind's px-5 */
+    padding-top: 0.5rem; /* Equivalent to Tailwind's py-2 */
+    padding-bottom: 0.5rem; /* Equivalent to Tailwind's py-2 */
+    border-radius: 0.375rem; /* Equivalent to Tailwind's rounded-md */
+    width: max-content; /* Tailwind's w-max to make the width as wide as the content */
+  }
+  .container {
+    display: flex;
+    flex-direction: column; /* Default to column, but change to row on larger screens */
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.25rem; /* 20px */
+    padding-bottom: 1.25rem; /* 20px */
+    gap: 0.75rem; /* 12px */
+  }
+  
+  @media (min-width: 768px) { /* Tailwind's default `md` breakpoint */
+    .container {
+      flex-direction: row;
+    }
+  }
+  
+  .element-class {
+    width: 100%;
+  }
+  
+  /* Equivalent of "md:w-auto" - Adjust the breakpoint as needed */
+  @media (min-width: 768px) { /* Tailwind's default "md" breakpoint is 768px */
+    .element-class {
+      width: auto;
+    }
+  }
+
+  .element-3 {
+    width: 100%; /* w-full */
+    height: 200px; /* h-[200px] */
+    object-fit: cover; /* object-cover */
+  }
+  
+  @media (min-width: 768px) { /* Medium breakpoint */
+    .element {
+      height: 350px; /* md:h-[350px] */
+    }
+  }
+
+  .montserrat-alt {
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+  .background_image{
+      background-image: url("/public/images/Form1_v1p.webp");
+      
+      
+  }
+   #navbar {
+  transition: top 0.3s; /* Smooth transition for sliding effect */
 }
-.justify-between{
+
+.nav-hidden {
+  top: -100px; /* Adjust as necessary to hide the nav */
+}
+
+.nav-visible {
+  top: 0;
+}
+
+.element-4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1rem; /* Equivalent to px-4 */
+    z-index: 50; /* Equivalent to z-50 */
+    transform: none; /* Placeholder for transform, adjust as needed */
+  }
+  
+  @media (min-width: 768px) { /* Tailwind's default medium breakpoint */
+    .element-4 {
+      padding: 0 150px; /* Equivalent to md:px-[150px] */
+    }
+  }
+  .blue-bg {
+    background-color: #3B82F6; /* Equivalent to bg-blue-500 */
+  }
+
+
+  .header {
+    height: 110px;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    z-index: 1;
+
+}
+
+.subheader {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 2.5px;
+    bottom: 2px;
+    right: 100px;
+    left: 100px;
+
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    top: 0px;
+    left: 0px;
+    position: relative;
+
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-evenly;
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
     justify-content: space-between;
 }
 
+.menu span {
+    margin-right: 10px;
+}
+
+.nav span,
+button,
+a {
+    color: #fff;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.contactus {
+    background-color: skyblue;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin: 2px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    /* Initial background color */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-size: 100% 200%;
+}
 
 
 
+
+.menuicon {
+    display: none;
+    height: 10%;
+    background-color: rgb(251, 251, 252);
+    margin-top: 110px;
+    /* Adjust this value to position the menuicon below the header */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smallmenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(245, 215, 215);
+    margin: 1px;
+    padding: 2px 15px;
+}
+
+.smallcontactus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.downarrow {
+    background-color: transparent;
+    border: none;
+}
+
+.smallcontactusinner {
+    height: 10%;
+    padding: 5px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: skyblue;
+    /* Initial background color */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-size: 100% ;
+}
+
+
+.display-jc{
+    
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    right:150px;
+    left:150px;
+}
+
+
+
+.element-5 {
+  display: flex;
+  gap: 0.75rem; /* This value corresponds to Tailwind's "gap-3", assuming a base font size of 16px */
+  align-items: center;
+}
+.element-6 {
+  display: none;
+}
+@media (max-width:768px){
+  
+.display-jc{
+  padding:20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left:0; 
+  right:0;
+ 
+}
+}
+
+/* Display the element as a block on medium screens and above (e.g., min-width: 768px) */
+@media (min-width: 768px) {
+  .element-6 {
+    display: block;
+  }
+}
+.element-7{
+  display: block;
+visibility: hidden;
+background-color: #4a90e2; /* Assuming bg-blue-700 is a shade of blue */
+max-height: auto;
+padding: 0.75rem; /* Assuming p-3 represents 0.75rem */
+border-radius: 0.375rem; /* Assuming rounded-md represents 0.375rem */
+}
+/* Base styles */
+.contact-us {
+  display: none; /* Corresponds to "hidden" */
+  background-color: #1D4ED8; /* Corresponds to "bg-blue-700", a shade of blue */
+  height: max-content; /* Corresponds to "h-max" */
+  padding: 0.75rem; /* Corresponds to "p-3", which is padding all around */
+  border-radius: 0.375rem; /* Corresponds to "rounded-md" */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .contact-us {
+    display: block; /* Overrides "display: none;" from the base styles */
+  }
+}
+
+.element-8 {
+  display: block; /* This makes the element display as a block by default */
+}
+
+@media (min-width: 768px) {
+  .element-8 {
+    display: none; /* This hides the element on screens 768px wide and larger */
+  }
+}
+
+.green {
+  background-color: rgba(19, 41, 75, 1.0);
+  opacity: 1;
+}
+
+.subheader{
+  border:2px solid red;
+  height:110px;
+  
+ }

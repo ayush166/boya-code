@@ -1,11 +1,13 @@
  <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script> 
-   
+   <link rel="stylesheet" href="style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap"
       rel="stylesheet"
@@ -14,35 +16,36 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
   <style>
-    .montserrat-alt {
-      font-family: "Montserrat Alternates", sans-serif;
-    }
-    .background_image{
-        background-image: url("/public/images/Form1_v1p.webp");
-        
-        
-    }
-     #navbar {
-    transition: top 0.3s; /* Smooth transition for sliding effect */
+   
+   .montserrat-alt {
+    font-family: "Montserrat Alternates", sans-serif;
   }
-
-  .nav-hidden {
-    top: -100px; /* Adjust as necessary to hide the nav */
+  .background_image{
+      background-image: url("/public/images/Form1_v1p.webp");
+      
+      
   }
+   #navbar {
+  transition: top 0.3s; /* Smooth transition for sliding effect */
+ 
+}
 
-  .nav-visible {
-    top: 0;
-  }
+.nav-hidden {
+  top: -100px; /* Adjust as necessary to hide the nav */
+}
 
+.nav-visible {
+  top: 0;
+}
   </style>
   <body class="background_image">
-    <div class="md:px-[150px] px-4">
-      <nav class="md:px-[150px] px-4 fixed inset-x-0 top-0 transform nav-hidden z-50" id="navbar">
-        <div class="py-10 flex justify-between">
+    <div class="element">
+      <nav class="element-4" id="navbar">
+        <div class="flex-container">
           <div>Logo</div>
-          <div class="hidden md:block">Contact Us</div>
-          <div class="flex gap-3 md:hidden">
-            <div class="hidden md:block">Menu <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
+          <div class="hidden-md-up">Contact Us</div>
+          <div class="flex-gap-3-md-hidden">
+            <div class="hidden-md-block">Menu <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
           <div>
             <i class="fa fa-search" aria-hidden="true"></i>
           </div>
@@ -52,41 +55,56 @@
           </div>
         </div>
       </nav>
-
-      <div class="md:flex  pt-20 ">
-        <div class=" md:w-1/2  mr-[20px]">
-            <h3 class="montserrat-alt  text-white text-4xl">
+     <!-- <div class="display-jc ">
+      <div class="subheader">
+        <div class="">
+          <img src="./public/images/logo.webp" alt="" class="logo_img">
+        </div>
+        <div class="element-5">
+          <div class="element-6">Menu <span><i class="fa-solid fa-chevron-down"></i></span></div>
+          <div ><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="contact-us">Contact Us</div>
+          <div class="element-8 cursor-pointer" id="hamburger
+          " onclick="myFunction(this)"><i class="fa-solid fa-bars"></i></div>
+          
+        </div>
+      </div>
+     </div> -->
+    
+      <div class="element-1 ">
+        <div class="element-2">
+            <h3 class="montserrat-alt-text-white-text-4xl">
               Easy to Use Bread Pay™ Marketing Assets 
             </h3>
-            <div class="text-white font-bold text-2xl pb-5">
+            <div class="text-white-font-bold-text-2xl-pb-5">
               The Bread Pay™ Marketing
               Toolkit
             </div>
-            <p class="pr-5 text-white">
+            <p class="pr-5-text-white">
               Let us take marketing your Bread Pay™ buy now, pay later offering off
               your to-do list. Whether you're looking for themed assets ahead of a
               key holiday, or if you are just looking for something new, we have you
               covered.
             </p>
-            <div class="flex gap-3 md:flex-row flex-col py-5  justify-center  items-center md:justify-start">
-              <div class="text-blue-400  bg-white px-5 py-2 rounded-md w-max   ">
+            <div class="flex-gap-3-flex-col-py-5-justify-center-items-center-md-justify-start ">
+              <div class="text-blue-400-bg-white-px-5-py-2-rounded-md-w-max">
                 Explore Every Day Assets
               </div>
-              <div class="text-blue-400 bg-white px-5 py-2 rounded-md w-max ">
+              <div class="custom-class ">
                Explore Mother's day Assets
               </div>
              </div>
             </div>
             <div>
-              <div class="flex gap-3 md:flex-row flex-col py-5 justify-center items-center ">
-                <div class="w-full md:w-auto">
-                    <img src="./public/images/Momson.webp" alt="" class="md:h-[350px] w-full h-[200px] object-cover">
+              <div class="container">
+                <div class="element-class">
+                    <img src="./public/images/Momson.webp" alt="" class="element-3">
                 </div>
-                <div class="w-full md:w-auto">
-                    <img src="./public/images/With these sales, your cart should be full.webp" alt="" class="md:h-[350px] w-full h-[200px] object-cover">
+                <div class="element-class">
+                    <img src="./public/images/With these sales, your cart should be full.webp" alt="" class="element-3">
                 </div>
-                <div class="w-full md:w-auto">
-                    <img src="./public/images/three.jpg" alt="" class="md:h-[350px] w-full h-[200px] object-cover">
+                <div class="element-class">
+                    <img src="./public/images/three.jpg" alt="" class="element-3">
                 </div>
               </div>
             </div>
@@ -95,25 +113,43 @@
       </div>
      
       <script>
-        // When the user scrolls the page, execute the function
-        window.onscroll = function() { scrollFunction() };
-      
+        window.addEventListener("scroll", function () {
+            scrollFunction();
+        });
+
         function scrollFunction() {
-          // Get the navbar
-          var navbar = document.getElementById("navbar");
-      
-          // Check if page is scrolled more than 50 pixels
-          if (window.scrollY > 50) {
-            // If scrolled more than 50px, show the navbar
-            navbar.classList.add('nav-visible', 'bg-blue-500', 'shadow-lg');
-            navbar.classList.remove('nav-hidden');
-          } else {
-            // If scrolled less than or equal to 50px, hide the navbar
-            navbar.classList.add('nav-hidden');
-            navbar.classList.remove('nav-visible', 'bg-blue-500', 'shadow-lg');
-          }
+            var navbar = document.querySelector(".display-jc");
+            var logoImage = document.querySelector(".logo_img");
+
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add("green");
+                logoImage.setAttribute("src", "https://go.breadpayments.com/hs-fs/hubfs/Bread_Pay_TM_Full_Color-1.png?width=548&height=219&name=Bread_Pay_TM_Full_Color-1.png");
+            } else {
+                navbar.classList.remove("green");
+                logoImage.setAttribute("src", "https://go.breadpayments.com/hs-fs/hubfs/Bread_Pay_TM_white-1.png?width=548&height=219&name=Bread_Pay_TM_white-1.png");
+            }
         }
-      </script>
+
+
+        const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // Add click event to hamburger icon
+    hamburger.addEventListener('click', function() {
+        // Toggle the 'hidden' class to show/hide the mobile menu
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    function myFunction(x) {
+            x.classList.toggle("change");
+            var menuIcon = document.querySelector(".menuicon");
+            if (menuIcon.style.display === "block") {
+                menuIcon.style.display = "none";
+            } else {
+                menuIcon.style.display = "block";
+            }
+        }
+    </script>
       
   </body>
 </html>
