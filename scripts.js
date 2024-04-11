@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuButton = document.getElementById('menuButton');
     const menuDropdown = document.getElementById('menuDropdown');
     const hamburger = document.getElementById('hamburger');
-    const marketingAssetsItem = document.querySelector('#menuDropdown li:first-child'); // Assuming it's the first list item
+    // Select all list items within the dropdown
+    const dropdownItems = menuDropdown.querySelectorAll('li');
 
     // Hover area for dropdown
     const menuHoverArea = document.createElement('div');
@@ -50,8 +51,11 @@ document.addEventListener('DOMContentLoaded', function () {
     menuHoverArea.addEventListener('mouseenter', showDropdown);
     menuHoverArea.addEventListener('mouseleave', scheduleHideDropdown);
 
-    marketingAssetsItem.addEventListener('mouseenter', showDropdown); // Apply hover logic to this item
-    marketingAssetsItem.addEventListener('mouseleave', scheduleHideDropdown); // Apply hover logic to this item
+    // Apply hover logic to all dropdown items
+    dropdownItems.forEach(item => {
+        item.addEventListener('mouseenter', showDropdown);
+        item.addEventListener('mouseleave', scheduleHideDropdown);
+    });
 
     // Event Listeners for Search Overlay
     document.querySelector('.fa-search').addEventListener('click', function () {
