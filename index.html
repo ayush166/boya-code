@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <link rel="stylesheet" href="./dist/styles.css" />
+    <link rel="stylesheet" href="./style.css"> -->
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap"
       rel="stylesheet"
@@ -66,7 +68,7 @@
     <!-- Search Overlay -->
     <div
       id="searchOverlay"
-      class="fixed left-0 top-40 right-0 flex items-center justify-center hidden z-50"
+      class="fixed left-0 top-40 right-0  items-center justify-center hidden z-50"
     >
       <div class="bg-white rounded-lg shadow-lg relative">
         <input
@@ -83,10 +85,10 @@
     <div class="">
       <div class="md:px-[150px] px-4 background_image">
         <nav
-          class="md:px-[150px] px-4 fixed inset-x-0 top-0 transform nav-hidden z-50"
+          class="md:px-[150px] px-4 fixed inset-x-0 top-0 transform  z-50"
           id="navbar"
         >
-          <div class="py-10 flex justify-between">
+          <div class="py-5 flex justify-between">
             <div>
               <img
                 src="./public/images/logo.webp"
@@ -96,7 +98,7 @@
             </div>
 
             <div class="flex gap-8 text-white font-bold text-lg items-center">
-              <div id="menuButton" class="hidden md:block">
+              <div id="menuButton" style="display: none;" class="md:block">
                 Menu
                 <span
                   ><i class="fa fa-chevron-down" aria-hidden="true"></i
@@ -107,7 +109,7 @@
                 <i class="fa fa-search" aria-hidden="true"></i>
               </div>
               <div class="md:hidden" id="hamburger">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-bars text-3xl" aria-hidden="true"></i>
               </div>
               <div class="bg-white/50 px-2 py-1 rounded-md hidden md:block">
                 Contact Us
@@ -117,8 +119,9 @@
         </nav>
         <div
           id="menuDropdown"
-          class="hidden fixed top-[-80px] right-[350px] z-999 bg-white shadow-lg"
-        >
+          class=" fixed  right-[350px] z-999 bg-white shadow-lg"
+           style="display: none;"  
+          >
           <ul class="flex flex-col">
             <li>
               <a
@@ -210,9 +213,9 @@
         </div>
       </div>
       <!-- Section 2 -->
-      <div class="md:px-[150px] px-5">
+      <div class="md:px-[150px] px-5 ">
         <div>
-          <h2 class="text-center text-lg">Asset Sampling</h2>
+          <h2 class="text-center text-3xl text-center text-[#59bec9]  montserrat-alt mb-[1.4rem] pt-[5rem]">Asset Sampling</h2>
         </div>
         <div class="md:flex">
           <div>
@@ -240,8 +243,8 @@
       </div>
 
       <!-- Section 3 themes for Every Day  -->
-      <div class="md:px-[150px] px-5">
-        <h3 class="text-4xl text-center">themes for EveryDay</h3>
+      <div class="md:px-[150px] px-5 bg-[#F1F6F7]">
+        <h3 class="text-3xl text-center text-[#59bec9] montserrat-alt mb-[1.375rem] pt-[6.125rem]">themes for EveryDay</h3>
         <p class="text-lg text-center">
           Feel free to use these assets whenever you choose. We've designed them
           to be applicable all year long.
@@ -302,11 +305,15 @@
         </div>
       </div>
       <!-- Section 4 themes for Mother's Day -->
-      <div class="md:px-[150px] px-5">
+      <div class="md:px-[150px] px-5 bg-[#F1F6F7]">
         <div class="flex justify-center pt-10">
-          <img src="./public/images/divider.webp" alt="" class="w-1/2" />
+          <img
+            src="./public/images/divider.webp"
+            alt=""
+            class="md:w-1/2 w-full"
+          />
         </div>
-        <h4 class="text-center text-blue-500 text-4xl py-5">
+        <h4 class="text-center text-3xl text-center text-[#59bec9] py-5 montserrat-alt mb-[1.375rem]">
           themes for Mother's Day
         </h4>
         <p class="text-center">
@@ -341,11 +348,15 @@
         </div>
       </div>
       <!-- Section 5 themes for Memorial Day Sales -->
-      <div class="md:px-[150px] px-5">
+      <div class="md:px-[150px] px-5 bg-[#F1F6F7]">
         <div class="flex justify-center">
-          <img src="./public/images/divider.webp" alt="" class="w-1/2" />
+          <img
+            src="./public/images/divider.webp"
+            alt=""
+            class="md:w-1/2 w-full"
+          />
         </div>
-        <h4 class="text-blue-500 text-4xl text-center">
+        <h4 class="text-[#59bec9] mb-[1.375rem] montserrat-alt text-3xl text-center">
           themes for Memorial Day Sales
         </h4>
         <p class="text-center">Memorial Day is Monday, May 27th</p>
@@ -354,41 +365,171 @@
           channels as early as Monday, April 29th.
         </p>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 py-8">
-          <div ><img src="./public/images/Seriously Its on sale.webp" alt="" class="rounded-lg w-full h-[317px] object-cover"></div>
-          <div><img src="./public/images/You came. You saw. You purchased.webp" alt="" class="rounded-lg w-full h-[317px] object-cover"></div>
-          <div><img src="./public/images/With these sales, your cart should be full.webp" alt="" class="rounded-lg w-full h-[317px] object-cover"></div>
+          <div>
+            <img
+              src="./public/images/Seriously Its on sale.webp"
+              alt=""
+              class="rounded-lg w-full h-[317px] object-fill"
+            />
+          </div>
+          <div>
+            <img
+              src="./public/images/You came. You saw. You purchased.webp"
+              alt=""
+              class="rounded-lg w-full h-[317px] object-fill"
+            />
+          </div>
+          <div>
+            <img
+              src="./public/images/With these sales, your cart should be full.webp"
+              alt=""
+              class="rounded-lg w-full h-[317px] object-cover"
+            />
+          </div>
         </div>
       </div>
       <!-- Section 6 themes for Father's Day -->
-      <div class="md:px-[150px] px-5">
+      <div class="md:px-[150px] px-5 bg-[#F1F6F7]">
         <div class="flex justify-center">
-          <img src="./public/images/divider.webp" alt="w-1/2">
+          <img src="./public/images/divider.webp" class="md:w-1/2 w-full" />
         </div>
-        <h4 class="text-4xl text-center">themes for Father's Day</h4>
+        <h4 class="text-3xl text-center text-[#59bec9] montserrat-alt mb-[1.375rem]">themes for Father's Day</h4>
         <p class="text-center">Father's Day is Sunday, June 16th</p>
-        <p class="text-center">Consider deploying a selection of our marketing assets across your channels as early as Monday, June 3rd.</p>
+        <p class="text-center">
+          Consider deploying a selection of our marketing assets across your
+          channels as early as Monday, June 3rd.
+        </p>
         <div class="grid grid-cols-2 md:grid-cols-3">
           <div>
-            <img src="./public/images/Under Development.webp" alt="w-full rounded-md">
+            <img
+              src="./public/images/Under Development.webp"
+              alt="w-full rounded-md"
+            />
           </div>
           <div>
-            <img src="./public/images/Under Development.webp" alt="w-full rounded-md">
+            <img
+              src="./public/images/Under Development.webp"
+              alt="w-full rounded-md"
+            />
           </div>
           <div>
-            <img src="./public/images/Under Development.webp" alt="w-full rounded-md">
+            <img
+              src="./public/images/Under Development.webp"
+              alt="w-full rounded-md"
+            />
           </div>
         </div>
       </div>
-      <div>
+<!-- normal divider -->
+      <div class="md:px-[150px] px-5 bg-[#F1F6F7]">
         <div class="flex justify-center">
-          <img src="./public/images/divider.webp" alt="" class="w-1/2">
+          <img
+            src="./public/images/divider.webp"
+            alt=""
+            class="md:w-1/2 w-full"
+          />
         </div>
       </div>
-     <!-- Section 7 Assets by channel -->
-     <div>
-      <h4 class="text-center text-4xl text-blue-500">Assets by channel</h4>
-      <p class="text-center">Explore tips for marketing on different channels and which assets sizes we'd recommend for each.</p>
-     </div>
+      <!-- Section 7 Assets by channel -->
+      <div class="md:px-[150px] px-5">
+        <h4 class="text-center text-3xl text-[#59bec9] montserrat-alt">Assets by channel</h4>
+        <p class="text-center py-4">
+          Explore tips for marketing on different channels and which assets
+          sizes we'd recommend for each.
+        </p>
+
+        <!-- Tab buttons container -->
+        <div class="flex p-1 space-x-1  rounded-xl" id="tabs">
+          <!-- Tab buttons -->
+          <button
+            id="websiteTab"
+            class="tab-button w-full py-2.5 text-sm leading-5 font-normal focus:font-bold text-black rounded-lg  bg-white shadow"
+            data-tab="website"
+          >
+            Website
+          </button>
+
+          <button
+            id="emailTab"
+            class="tab-button w-full py-2.5 text-sm leading-5 font-normal focus:font-bold text-black rounded-lg  bg-white shadow"
+            data-tab="email"
+          >
+            Email
+          </button>
+
+          <button
+            id="socialMediaTab"
+            class="tab-button w-full py-2.5 text-sm leading-5 font-normal focus:font-bold text-black rounded-lg  bg-white shadow"
+            data-tab="socialMedia"
+          >
+            Social Media
+          </button>
+        </div>
+
+        <!-- Tab content for Website -->
+        <div
+          id="website"
+          class="hidden pt-[3rem] bg-white rounded-lg  tab-content"
+        >
+          <img src="./public/images/Website 2.webp" alt="" class="mb-4">
+          <h3 class="text-[#59bec9] text-base">Website Banners</h3>
+  <p>Looking for the perfect Bread Pay marketing assets for your website?</p>
+  <p>Add one of our seasonal banners to your homepage to promote your buy now, pay later financing offer from the get-go! It is best practice for this marketing to drive to your financing page where customers can explore your financing options, review necessary disclosures, and see if they pre-qualify!</p>
+  <p>We've developed two different sizes that will help add a touch of seasonal buy now, pay later along your customer's buying journey.</p>
+  <p>Look for our easy-to-use Bread Pay marketing assets with the following sizes:</p>
+        </div>
+
+        <!-- Tab content for Email -->
+        <div
+          id="email"
+          class="hidden pt-[3rem] bg-white rounded-lg  tab-content"
+        >
+          <img
+            src="./public/images/Email.webp"
+            alt="Email Banner"
+            class="mb-4"
+          />
+          <h3 class="text-[#59bec9] text-base">Email Banners</h3>
+          <p>
+            Looking for the perfect Bread Pay marketing assets for your emails?
+          </p>
+          <p>
+            It is important to think about digital marketing opportunities that
+            expand beyond your website.
+          </p>
+          <p>
+            Leveraging an omni-channel approach to Bread Pay marketing is
+            crucial to driving awareness and adoption. Be sure to include Bread
+            Pay Marketing that drives back to your Financing page in your
+            customer emails.
+          </p>
+          <p>
+            Look for our easy-to-use Bread Pay marketing assets with the
+            following sizes:
+          </p>
+          <!-- Add sizes or other content here -->
+        </div>
+
+        
+        <!-- Tab content for Social Media -->
+<div id="socialMedia" class="hidden pt-[3rem] bg-white rounded-lg  tab-content">
+  <img src="./public/images/Social Media.webp" alt="" class="mb-4">
+  <h3 class="text-[#59bec9] text-base">Social Media</h3>
+  <p>Looking for the perfect Bread Pay marketing assets for your Instagram?</p>
+  <p>Ensure an appropriate and comprehensive digital footprint for your buy now, pay later offering by adding a clear Bread Pay message wherever you digitally market your product, like on your Social Media channels.</p>
+  <p>Look for our easy-to-use Bread Pay marketing assets with the following sizes:</p>
+</div>
+
+      </div>
+      <!-- Section 8 Compliance and disclosure reminders -->
+      <div class="md:px-[150px] px-5">
+        <h4 class=" text-3xl text-[#59bec9] montserrat-alt">Compliance and disclosure reminders</h4>
+        <p>The Bread Pay “Subject to Credit Approval” (SCA) and bank disclosure below should be located either on the same page as the ad or on another page one-click-away.</p>
+      </div>
+      <!-- Section 9 Before you go live -->
+      <div class="md:px-[150px] px-5 bg-[#F1F6F7]">
+        <h4 class="text-center pt-[5rem]  text-3xl text-[#59bec9] montserrat-alt">Before you go live</h4>
+      </div>
     </div>
 
     <script src="scripts.js"></script>

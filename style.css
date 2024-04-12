@@ -54,552 +54,61 @@
 
 
   
+  .wrapper {
+    padding-left: 1.25rem; /* This is equivalent to Tailwind's px-5 */
+    padding-right: 1.25rem; /* Tailwind uses a default scale where px-5 equals to 1.25rem */
+  }
+  
+  /* Medium screens (768px and larger) */
+  @media (min-width: 768px) {
+    .wrapper {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+  }
 
-.board2 {
-    margin: 50px 100px;
-    height: 410px;
-    background-color:rgba(208, 224, 227, 0.3);
-
+  .heading-4 {
+    font-size: 1.875rem; /* Equivalent to Tailwind's text-3xl */
+    color: #59bec9; /* Custom color */
+    font-family: 'Montserrat', sans-serif; /* Assuming 'Montserrat-alt' refers to the Montserrat font */
 }
-
-.board2heading {
-    font-size: x-large;
-    padding: 10px;
-    font-weight: 800;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-#sidecontentbox2_1 {
-    background-image: url('https://go.breadpayments.com/hubfs/Shes%20Gonna%20Love%20It%20Full%20Asset.png');
-    background-size: cover;
-    /* Ensure the background image covers the entire div */
-    background-position: center;
-    /* Center the background image within the div */
-
-}
-
-#sidecontentbox2_2 {
-    background-image: url('https://go.breadpayments.com/hubfs/Seriously%20its%20on%20sale%20Full%20Asset.png');
-    background-size: cover;
-    /* Ensure the background image covers the entire div */
-    background-position: center;
-    /* Center the background image within the div */
-
-}
-
-#sidecontentbox2_3 {
-    background-image: url('https://go.breadpayments.com/hubfs/You%20Purchased%20Full%20Asset.png');
-    background-size: cover;
-    /* Ensure the background image covers the entire div */
-    background-position: center;
-    /* Center the background image within the div */
-
-}
-
-
-.Row1Wrapper {
-    background-color: rgba(208, 224, 227, 0.3);
-    padding-bottom: 20px;
-}
-
-.headingRow {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contentHeading h2 {
-    margin: 0 0 22.4px;
-    font-weight: bold;
-    font-size: 24px; /* Adjust font size as needed */
-}
-
-.contentHeading span {
-    color: #13294b;
-    font-size: 16px; /* Adjust font size as needed */
-}
-
-.ContentRow1,
-.ContentRow2 {
-    margin: 0 80px 20px;
-}
-
-.bannerContent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.dealBanner {
-    width: calc(33.33% - 20px); /* Adjust width as needed */
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.dealBanner img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
-.dealBanner a {
-    width: 100%;
-    background-color:white;
-}
-
-.PriceGallary {
-    bottom: 30px;
-    position: relative;
-    background-color: #fff;
-    border-radius: 15px;
-    text-align: center;
-    padding: 10px;
-    margin: 0px 20px;
-    border: 1px solid skyblue;
-}
-
-.PriceGallaryh {
-    margin: 0;
-    padding: 0;
-}
-
-.PriceGallaryP {
-    margin: 0;
-    padding: 0;
-}
-
-.PriceGallaryP h4 {
-    font-weight: normal;
-    font-size: 18px; /* Adjust font size as needed */
-}
-
-.PriceGallaryP p {
-    margin: 5px 0;
-}
-
-.PriceGallaryP a {
-    color: #59BEC9;
-    text-decoration: none;
-}
-
-.PriceGallaryP a:hover {
-    text-decoration: underline;
-}
-.specialimage{
-    padding-top: 18px;
-    padding-bottom: 10px;
-    height: 800px;
-    width: 100px;
-}
-.ContentRow1,.ContentRow2{
-    margin:  20px 80px;
-}
-.specialimage2{
-    padding-top: 15px;
-    padding-bottom: 10px;
-    height: 800px;
-    width: 100px;
-}
-.hx{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(208, 224, 227, 0.3);
-}
-.hz{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80px;
-    width: 500px;
-    background-color: rgba(208, 224, 227, 0.3);
-    background-image: url('https://go.breadpayments.com/hubfs/divider.png');
-        background-size:contain;
-        /* Ensure the background image covers the entire div */
-        background-position: center;
-        /* Center the background image within the div */
-    
-   
-}
-/* Style for headline */
-.headline h2 {
-    text-align: center;
-}
-
-/* Style for content text */
-.fn__content_text h3 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #13294b;
-}
-
-.fn__content_text p {
-    color: #13294b;
-}
-
-.fn__content_text strong {
-    font-weight: bold;
-}
-
-.fn__content_text blockquote {
-    margin: 20px 0;
-    padding-left: 20px;
-    border-left: 2px solid #13294b;
-}
-
-/* Style for content images */
-.fn__content_img img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Style for tabs navigation */
-.fn__nav_scroller {
-    overflow-x: auto;
-    white-space: nowrap;
-    margin-bottom: 20px;
-}
-
-.fn__nav_scroller ul {
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-}
-
-.fn__nav_scroller li {
-    display: inline-block;
-    margin-right: 10px;
-    cursor: pointer;
-    color: #13294b;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-}
-
-.fn__nav_scroller li.active {
-    border-bottom-color: #13294b;
-}
-
-/* Style for tabs content */
-.fn_container_tabs {
-    position: relative;
-    overflow: hidden;
-}
-
-.t--panel {
+.tab-element {
     display: none;
-}
-
-.t--panel.active {
-    display: block;
-}
-
-.channels {
-    margin-top: 0px;
-    margin: 0px 150px;
-    height: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 1px solid lightblue;
-    border-radius: 1pc;
-}
-
-.channel {
-    background-color: #59BEC9;
-    height: 40px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.sidecontent3 {
-    margin: 0px 100px;
-    height: 500px;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
-}
-
-.sidecontent3_part1 {
-    padding-left: 10px;
-    width: 70%;
-    height: auto;
-    padding-right: 70px;
-}
-
-.fn__content_text {
-    margin: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333; /* Change color as needed */
-}
-
-.fn__content_text h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #13294b; /* Change color as needed */
-}
-
-.fn__content_text p {
-    margin-bottom: 10px;
-}
-
-.fn__content_text strong {
-    font-weight: bold;
-}
-
-.fn__content_text blockquote {
-    margin: 20px 0;
-    padding-left: 20px;
-    font-weight: bolder;
-    border-left: 7px solid #13294b; /* Change color as needed */
-}
-
-.sidecontent3_part2 img {
-    height: 500px;
-    width: 400px;
-}
-.fn__content_text {
-    display: none; /* Hide all tab contents by default */
-}
-
-.fn__content_text.active {
-    display: block; /* Show the active tab content */
-}
-
-
-.two__columns_el {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 100px;
-}
-
-.two__columns_img {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.two__columns_text {
-    flex: 2;
-}
-
-.two__columns_text h2 {
-    margin-top: 0;
-}
-
-.two__columns_text p {
-    margin-bottom: 10px;
-}
-
-.two__columns_text blockquote {
-    margin: 20px 0;
-    padding-left: 20px;
-    border-left: 5px solid #59bec9;
-    font-style: italic;
-}
-
-.two__columns_text div {
-    margin-bottom: 10px;
-}
-
-
-.BreadpayFooter1{
-    padding: 80px 20px;
-}
-.question{
-
-    margin: 20px 90px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-}
-.button1122 {
-    display: inline-block;
-    height: 55px;
-    padding: 10px 20px 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.5;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: #ffffff; /* Background color set to white */
-    border: 2px solid #59BEC9;
-    border-radius: 6px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.button:hover {
-    background-color: #59BEC9;
-    color: #ffffff;
-}
-
-.button--secondary {
+    padding-top: 3rem;
     background-color: white;
-    color: #59BEC9;
+    border-radius: 0.5rem;
+}
+.font-color {
+    color: #59bec9;
+    font-size: 1.875rem;
+}
+.full-width-small-text {
+    width: 100%;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    font-size: 0.875rem;
+    line-height: 1.25;
 }
 
-.button--secondary:hover {
-    background-color: #59BEC9;
-    color: #ffffff;
+.rounded-box-white-shadow {
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    background-color: white; /* Equivalent to bg-white */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Equivalent to shadow */
 }
-#mainblockbutton1{
-    margin-right: 5px;
-}
-#mainblockbutton2{
-    margin-left: 5px;
-}
-.hidden {
-    display: none !important;
+.focus-bold:focus {
+    font-weight: bold;
 }
 
-.green {
-    background-color: rgba(19, 41, 75, 1.0);
-    opacity: 1;
-}
-@media screen and (max-width: 450px) {
-    .subheader {
-        left: 10px;
-        right: 10px;
-    }
-
-    .menu,
-    .contactus {
-        display: none;
-    }
-
-    .nav {
-        right: 0px;
-        flex-wrap: wrap;
-    }
-
-    .container {
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .bar1,
-    .bar2,
-    .bar3 {
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        margin: 4px 0;
-        transition: 0.4s;
-    }
-
-    .change .bar1 {
-        transform: translate(0, 6px) rotate(-45deg);
-    }
-
-    .change .bar2 {
-        opacity: 0;
-    }
-
-    .change .bar3 {
-        transform: translate(0, -6px) rotate(45deg);
-    }
-
-    .board1 {
-        position: relative;
-        display: flex;
-        margin-top: 110px;
-        padding-bottom: 20px;
-        padding-top: 40px;
-        align-items: center;
-        flex-direction: column;
-        height: auto; /* Let the height adjust automatically */
-    }
-
-    .maincontent {
-        width: 92%;
-        height: auto;
-        margin: 0px 30px 10px 30px;
-        padding: 0px;
-    }
-
-    .sidecontent {
-        display: flex;
-        position: relative;
-        top: 10px;
-        right: 2px;
-        bottom: 0px;
-        width: 92%;
-        padding: 0px;
-        margin: 0px;
-        flex-direction: column; /* Adjusting to vertical layout */
-    }
-
-    .sidecontentbox {
-        height: 200px; /* Allowing height to adjust based on content */
-        width: 100%; /* Adjusting width */
-        padding: 10px 0px; /* Adding some padding for spacing */
-        margin: 10px 0px; /* Adding margin between items */
-        border: 2px solid blue;
-    }
-
-    .board1buttons {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .smallcontactusinner {
-        margin: 3px;
-    }
-
-    .board2 {
-        flex-direction: column;
-        align-items: center; /* Center align the elements */
-        height: auto; /* Let the height adjust automatically */
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .sidecontent2 {
-        display: flex;
-        position: relative;
-        flex-direction: column; /* Stack the elements vertically */
-        align-items: center; /* Center align the elements */
-        width: auto;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .sidecontentbox2 {
-        height: 700px;
-        width: 100%; /* Adjust the width of the boxes */
-        padding: 1px;
-    }
-
-    .dealBanner {
-        width: calc(50% - 20px); /* Adjust width to 50% of the container with some margin */
-    }
-
-    .contentHeading {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .ContentRow1,
-    .ContentRow2 {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
+.font-normal {
+    font-weight: 400;
 }
 
-
- 
+.text-black {
+    color: black;
+}
+.flex-space-x-1 {
+    display: flex;
+    padding: 1px;
+    gap: 1px;
+    border-radius: 0.75rem;
+}
